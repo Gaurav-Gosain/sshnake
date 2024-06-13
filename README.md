@@ -24,8 +24,9 @@ ssh -p 23234 localhost
 
 ## Gameplay
 
-The goal of the game is to guide your snake through the grid and eat the food pellets without running into the walls or itself. Eac
-h time you eat a pellet, your snake will grow in length.
+The goal of the game is to guide your snake through the grid and eat the food
+pellets without running into the walls or itself. Each time you eat a pellet,
+your snake will grow in length.
 
 You can use the following commands to control the snake:
 
