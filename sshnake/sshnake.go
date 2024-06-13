@@ -152,17 +152,47 @@ func (m model) View() string {
 		for j := 0; j < m.width; j++ {
 			c := cell{x: j, y: i}
 			if c == m.food {
-				row = append(row, lipgloss.NewStyle().Render("🍎"))
+				row = append(
+					row,
+					lipgloss.
+						NewStyle().
+						Render(
+							"🍎",
+						),
+				)
 			} else if cellIn(c, m.snake) {
-				row = append(row, lipgloss.NewStyle().Background(lipgloss.Color("#FFFFFF")).Render("  "))
+				row = append(
+					row,
+					lipgloss.
+						NewStyle().
+						Background(
+							lipgloss.Color("#FFFFFF"),
+						).
+						Render("  "),
+				)
 			} else {
 				row = append(row, "  ")
 			}
 		}
-		snakeBoard = append(snakeBoard, lipgloss.JoinHorizontal(lipgloss.Top, row...))
+		snakeBoard = append(
+			snakeBoard,
+			lipgloss.
+				JoinHorizontal(
+					lipgloss.Top,
+					row...,
+				),
+		)
 	}
 
-	return lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).Render(lipgloss.JoinVertical(lipgloss.Left, snakeBoard...))
+	return lipgloss.
+		NewStyle().
+		Border(lipgloss.RoundedBorder()).
+		Render(
+			lipgloss.JoinVertical(
+				lipgloss.Left,
+				snakeBoard...,
+			),
+		)
 }
 
 // return true if c in arr
