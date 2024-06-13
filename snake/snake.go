@@ -10,7 +10,7 @@ import (
 
 const (
 	size     = 30
-	tickRate = 40 * time.Millisecond
+	tickRate = 50 * time.Millisecond
 )
 
 type cell struct {
@@ -36,8 +36,14 @@ type model struct {
 }
 
 func New(width, height int) model {
+	if width == 0 {
+		width = size
+	}
+	if height == 0 {
+		height = size
+	}
 	m := model{
-		snake: []cell{{x: size / 2, y: size / 2}},
+		snake: []cell{{x: width / 2, y: height / 2}},
 		dir:   right,
 	}
 	m.food = spawnRandomFood(m)
