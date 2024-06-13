@@ -1,4 +1,4 @@
-package sshnake
+package snake
 
 import (
 	"time"

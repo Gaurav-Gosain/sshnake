@@ -16,7 +16,7 @@ import (
 	"github.com/charmbracelet/wish/activeterm"
 	"github.com/charmbracelet/wish/bubbletea"
 	"github.com/charmbracelet/wish/logging"
-	"github.com/gaurav-gosain/sshnake/sshnake"
+	"github.com/gaurav-gosain/sshnake/snake"
 )
 
 const (
@@ -61,6 +61,6 @@ func teaHandler(s ssh.Session) (tea.Model, []tea.ProgramOption) {
 	// This should never fail, as we are using the activeterm middleware.
 	pty, _, _ := s.Pty()
 
-	m := sshnake.New(pty.Window.Width, pty.Window.Height)
+	m := snake.New(pty.Window.Width, pty.Window.Height)
 	return m, []tea.ProgramOption{tea.WithAltScreen()}
 }
