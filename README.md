@@ -12,7 +12,7 @@
 A simple single player snake game written in Go using [bubbletea](https://github.com/charmbracelet/bubbletea)
 & Served over SSH using [Wish](https://github.com/charmbracelet/wish).
 
-<video src="assets/sshnake_demo.mp4"></video>
+https://github.com/Gaurav-Gosain/sshnake/assets/55647468/799abd52-3c10-45c0-8ca6-716f3de28571
 
 > [!NOTE]
 > Also supports vim-like movement keys (`hjkl`) and `ctrl+c` to quit the game.
