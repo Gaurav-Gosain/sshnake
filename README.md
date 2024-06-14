@@ -1,7 +1,18 @@
 # SSHnake
 
+<!--toc:start-->
+
+- [SSHnake](#sshnake)
+  - [Running the game](#running-the-game)
+    - [Start the server](#start-the-server)
+    - [Connect to the server](#connect-to-the-server)
+  - [Gameplay](#gameplay)
+  <!--toc:end-->
+
 A simple single player snake game written in Go using [bubbletea](https://github.com/charmbracelet/bubbletea)
 & Served over SSH using [Wish](https://github.com/charmbracelet/wish).
+
+<video src="assets/sshnake_demo.mp4"></video>
 
 > [!NOTE]
 > Also supports vim-like movement keys (`hjkl`) and `ctrl+c` to quit the game.
